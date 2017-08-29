@@ -1,0 +1,20 @@
+/*
+HomeHub Main CSS
+Version: 1.0
+Author: Stefanos Missin
+*/
+
+
+body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 1px;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    height: 100%
+}
