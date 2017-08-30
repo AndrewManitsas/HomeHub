@@ -33,25 +33,25 @@
         <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
 
         <!-- Titile -->
-        <title>HomeHub</title>
+        <title>HomeHub (Analytics Section)</title>
     </head>
     <body>
 		<div class="row">
 			<div class="col-md-12">
-				<h1 id="title-top">HomeHub</h1>
+				<h1 id="title-top">HomeHub (Analytics Section)</h1>
 			</div>
 		</div>
 
 		<!-- Navbar -->
 		<nav class="navbar navbar-inverse">
 			<ul class="nav navbar-nav">
-				<li class="active">
+				<li>
 					<a href="index.php">Overview</a>
 				</li>
 				<li>
 					<a href="appliances.php">Appliances</a>
 				</li>
-				<li>
+				<li class="active">
 					<a href="analytics.php">Analytics</a>
 				</li>
 				<li>
