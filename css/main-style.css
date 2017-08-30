@@ -19,3 +19,8 @@ html, body
 {
     height: 100%
 }
+
+#title-top
+{
+    text-align: center;
+}
