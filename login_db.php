@@ -16,6 +16,10 @@
 			echo "user_id: " . $row["user_id"] . " --- Username: " . $row["username"] . " --- Password: " . $row["password"] . " --- Name: " . $row["name"] . " --- Surname: " . $row["surname"] . " --- E-Mail: " . $row["email"] . "<br>";
 		
 			$_SESSION['user_id'] = $row['user_id'];
+			$_SESSION['username'] = $row['username'];
+			$_SESSION['name'] = $row['name'];
+			$_SESSION['surname'] = $row['surname'];
+			$_SESSION['email'] = $row['email'];
 
 			header("Location: index.php");
 		}

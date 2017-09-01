@@ -44,21 +44,46 @@ session_start();
 
 	<!-- Navbar -->
 	<nav class="navbar navbar-inverse">
-		<ul class="nav navbar-nav">
-			<li>
-				<a href="index.php">Overview</a>
-			</li>
-			<li class="active">
-				<a href="appliances.php">Appliances</a>
-			</li>
-			<li>
-				<a href="analytics.php">Analytics</a>
-			</li>
-			<li>
-				<a href="profile.php">Profile</a>
-			</li>
-		</ul>
-	</nav>
+	<ul class="nav navbar-nav">
+		<li>
+			<a href="index.php">Overview</a>
+		</li>
+		<li class="active">
+			<a href="appliances.php">Appliances</a>
+		</li>
+		<li>
+			<a href="analytics.php">Analytics</a>
+		</li>
+		<li>
+			<a href="profile.php">Profile</a>
+		</li>
+	</ul>
+	<ul class="nav navbar-nav navbar-right">
+		<li>
+			<a href="#">
+				<?php
+					if (isset($_SESSION['user_id']))
+					{
+						echo "Welcome " . $_SESSION['name'];
+					}
+					else
+					{
+						echo "You are not logged in.";
+					}
+				?>
+			</a>
+		</li>
+		<li>
+			<a href="register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+		</li>
+		<li>
+			<a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+		</li>
+		<li>
+			<a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+		</li>
+	</ul>
+</nav>
 
 	<!-- Panels -->
 	<div class="row">

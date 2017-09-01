@@ -60,10 +60,27 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li>
-					<a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+					<a href="#">
+						<?php
+							if (isset($_SESSION['user_id']))
+							{
+								echo "Welcome " . $_SESSION['name'];
+							}
+							else
+							{
+								echo "You are not logged in.";
+							}
+						?>
+					</a>
+				</li>
+				<li>
+					<a href="register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
 				</li>
 				<li>
 					<a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+				</li>
+				<li>
+					<a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
 				</li>
 			</ul>
 		</nav>

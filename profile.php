@@ -44,45 +44,64 @@
 
 		<!-- Navbar -->
 		<nav class="navbar navbar-inverse">
-			<ul class="nav navbar-nav">
-				<li>
-					<a href="index.php">Overview</a>
-				</li>
-				<li>
-					<a href="appliances.php">Appliances</a>
-				</li>
-				<li>
-					<a href="analytics.php">Analytics</a>
-				</li>
-				<li class="active">
-					<a href="profile.php">Profile</a>
-				</li>
-			</ul>
-		</nav>
+		<ul class="nav navbar-nav">
+			<li>
+				<a href="index.php">Overview</a>
+			</li>
+			<li>
+				<a href="appliances.php">Appliances</a>
+			</li>
+			<li>
+				<a href="analytics.php">Analytics</a>
+			</li>
+			<li class="active">
+				<a href="profile.php">Profile</a>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li>
+				<a href="#">
+					<?php
+						if (isset($_SESSION['user_id']))
+						{
+							echo "Welcome " . $_SESSION['name'];
+						}
+						else
+						{
+							echo "You are not logged in.";
+						}
+					?>
+				</a>
+			</li>
+			<li>
+				<a href="register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+			</li>
+			<li>
+				<a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+			</li>
+			<li>
+				<a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+			</li>
+		</ul>
+	</nav>
 
 		<!-- Panels -->
 		<div class="row">
-			<div class="col-md-6">
-				<!-- Left panel -->
-				<div class="panel panel-info">
-					<div class="panel-heading">Panel 1</div>
-					<div class="panel-body">Panel 1 Body</div>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<!-- Right panel -->
-				<div class="panel panel-info">
-					<div class="panel-heading">Panel 2</div>
-					<div class="panel-body">Panel 2 Body</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
 			<div class="col-md-12">
 				<div class="panel panel-info">
-					<div class="panel-heading">Panel 3</div>
-					<div class="panel-body">Panel 3 Body</div>
+					<div class="panel-heading">Profile</div>
+					<div class="panel-body">
+						<?php
+							if (isset($_SESSION['user_id']))
+							{
+								echo "User ID: " . $_SESSION['user_id'] . "<br>Username: " . $_SESSION['username'] . "<br>Name: " . $_SESSION['name'] . "<br>Surname: " . $_SESSION['surname'] . "<br>E-Mail: " . $_SESSION['email'];
+							}
+							else
+							{
+								echo "You are not logged in or registered.";
+							}
+						?>
+					</div>
 				</div>
 			</div>
 		</div>

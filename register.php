@@ -33,12 +33,12 @@
 		<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
 
 		<!-- Title -->
-		<title>HomeHub - Login</title>
+		<title>HomeHub - Register</title>
 	</head>
 	<body>
 		<div class="row">
 			<div class="col-md-12">
-				<h1 id="title-top">Login</h1>
+				<h1 id="title-top">Register</h1>
 			</div>
 		</div>
 		
@@ -49,13 +49,13 @@
 				</li>
 			</ul>
 		</nav>
-		
+
 		<div class="panel panel-info">
-			<div class="panel-heading">Login Form</div>
+			<div class="panel-heading">Register Form</div>
 			<div class="panel-body">
-				<form action="login_db.php" method="POST" class="form-horizontal">
+				<form action="register_db.php" method="POST" class="form-horizontal">
 					<div class="form-group">
-						<label class="control-label col-md-2" for="email">Username:</label>
+						<label class="control-label col-md-2" for="username">Username:</label>
 						<div class="col-md-10">
 							<input type="text" class="form-control" id="usr" name="usr" placeholder="Username">
 						</div>
@@ -64,6 +64,24 @@
 						<label class="control-label col-md-2" for="pwd">Password:</label>
 						<div class="col-md-10"> 
 							<input type="password" class="form-control" id="pwd" name="pwd" placeholder="Password">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-md-2" for="name">Name</label>
+						<div class="col-md-10">
+							<input type="text" class="form-control" name="name" id="name" placeholder="Name">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-md-2" for="surname">Surname</label>
+						<div class="col-md-10">
+							<input type="text" class="form-control" name="surname" id="surname" placeholder="Surname">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-md-2" for="email">E-Mail</label>
+						<div class="col-md-10">
+							<input type="text" class="form-control" name="email" id="email" placeholder="E-Mail">
 						</div>
 					</div>
 					<div class="form-group"> 
