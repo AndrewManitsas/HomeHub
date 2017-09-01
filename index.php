@@ -32,7 +32,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
         <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
 
-        <!-- Titile -->
+        <!-- Title -->
         <title>HomeHub</title>
     </head>
     <body>
@@ -56,6 +56,14 @@
 				</li>
 				<li>
 					<a href="profile.php">Profile</a>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+				</li>
+				<li>
+					<a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a>
 				</li>
 			</ul>
 		</nav>
