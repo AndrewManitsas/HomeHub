@@ -28,5 +28,10 @@
 	{
 		echo "0 results" . "<br>";
 		echo "No matching account";
+
+		//Used to determine if a failed login has occured.
+		$_SESSION['failed_login'] = 1;
+
+		header("Location: login.php");
 	}
 ?>

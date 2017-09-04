@@ -53,6 +53,17 @@
 		<div class="panel panel-info">
 			<div class="panel-heading">Login Form</div>
 			<div class="panel-body">
+
+				<?php
+					if (isset($_SESSION['failed_login']))
+					{
+						echo "Wrong Username of Password. Please try again.";
+
+						session_destroy();
+						session_start();
+					}
+				?>
+
 				<form action="login_db.php" method="POST" class="form-horizontal">
 					<div class="form-group">
 						<label class="control-label col-md-2" for="email">Username:</label>
