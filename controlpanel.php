@@ -32,85 +32,91 @@
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
         <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
 
-        <!-- Titile -->
-        <title>HomeHub (Profile Section)</title>
+        <!-- Title -->
+        <title>HomeHub - Control Panel</title>
     </head>
     <body>
+
+		<!-- Non logged in redirect -->
+		<?php
+			if ( !(isset($_SESSION['user_id'])) )
+			{
+				header("Location: login.php");
+			}
+		?>
+
 		<div class="row">
 			<div class="col-md-12">
-				<h1 id="title-top">HomeHub (Profile Section)</h1>
+				<h1 id="title-top">HomeHub - Control Panel</h1>
 			</div>
 		</div>
 
 		<!-- Navbar -->
 		<nav class="navbar navbar-inverse">
-		<ul class="nav navbar-nav">
-			<li>
-				<a href="index.php">Overview</a>
-			</li>
-			<li>
-				<a href="appliances.php">Appliances</a>
-			</li>
-			<li>
-				<a href="analytics.php">Analytics</a>
-			</li>
-			<li class="active">
-				<a href="profile.php">Profile</a>
-			</li>
-			<?php
-				if (isset($_SESSION['user_id']))
-				{
-					if ($_SESSION['user_id'] == 777)
+			<ul class="nav navbar-nav">
+				<li class="active">
+					<a href="index.php">Overview</a>
+				</li>
+				<li>
+					<a href="appliances.php">Appliances</a>
+				</li>
+				<li>
+					<a href="analytics.php">Analytics</a>
+				</li>
+				<li>
+					<a href="profile.php">Profile</a>
+				</li>
+				<?php
+					if (isset($_SESSION['user_id']))
 					{
-						echo "<li><a href='controlpanel.php'>Control Panel</a></li>";
+						if ($_SESSION['user_id'] == 777)
+						{
+							echo "<li><a href='controlpanel.php'>Control Panel</a></li>";
+						}
 					}
-				}
-			?>
-		</ul>
-		<ul class="nav navbar-nav navbar-right">
-			<li>
-				<a href="#">
-					<?php
-						if (isset($_SESSION['user_id']))
-						{
-							echo "Welcome " . $_SESSION['name'];
-						}
-						else
-						{
-							echo "You are not logged in.";
-						}
-					?>
-				</a>
-			</li>
-			<li>
-				<a href="register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
-			</li>
-			<li>
-				<a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a>
-			</li>
-			<li>
-				<a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
-			</li>
-		</ul>
-	</nav>
-
-		<!-- Panels -->
-		<div class="row">
-			<div class="col-md-12">
-				<div class="panel panel-info">
-					<div class="panel-heading">Profile</div>
-					<div class="panel-body">
+				?>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="#">
 						<?php
 							if (isset($_SESSION['user_id']))
 							{
-								echo "User ID: " . $_SESSION['user_id'] . "<br>Username: " . $_SESSION['username'] . "<br>Name: " . $_SESSION['name'] . "<br>Surname: " . $_SESSION['surname'] . "<br>E-Mail: " . $_SESSION['email'];
+								echo "Welcome " . $_SESSION['name'];
 							}
 							else
 							{
-								echo "You are not logged in or registered.";
+								echo "You are not logged in.";
 							}
 						?>
-					</div>
+					</a>
+				</li>
+				<li>
+					<a href="register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+				</li>
+				<li>
+					<a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+				</li>
+				<li>
+					<a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Panels -->
+		<div class="row">
+			<div class="col-md-6">
+				<!-- Left panel -->
+				<div class="panel panel-info">
+					<div class="panel-heading">Panel 1</div>
+					<div class="panel-body">Panel 1 Body</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<!-- Right panel -->
+				<div class="panel panel-info">
+					<div class="panel-heading">Panel 2</div>
+					<div class="panel-body">Panel 2 Body</div>
 				</div>
 			</div>
 		</div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Φιλοξενητής: 127.0.0.1
--- Χρόνος δημιουργίας: 01 Σεπ 2017 στις 19:02:28
+-- Χρόνος δημιουργίας: 04 Σεπ 2017 στις 13:35:32
 -- Έκδοση διακομιστή: 10.1.24-MariaDB
 -- Έκδοση PHP: 7.1.6
 
@@ -42,7 +42,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `password`, `name`, `surname`, `email`) VALUES
-(1, 'bio7720', '123', 'Andrew', 'Manitsas', 'st0709@icte.uowm.gr');
+(1, 'bio7720', '123', 'Andrew', 'Manitsas', 'st0709@icte.uowm.gr'),
+(777, 'admin', 'admin', 'Admin', 'Admin', 'admin@homehub.gr');
 
 --
 -- Ευρετήρια για άχρηστους πίνακες
@@ -62,7 +63,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT για πίνακα `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;COMMIT;
+  MODIFY `user_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=778;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

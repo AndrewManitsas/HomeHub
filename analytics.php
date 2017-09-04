@@ -57,6 +57,15 @@
 			<li>
 				<a href="profile.php">Profile</a>
 			</li>
+			<?php
+				if (isset($_SESSION['user_id']))
+				{
+					if ($_SESSION['user_id'] == 777)
+					{
+						echo "<li><a href='controlpanel.php'>Control Panel</a></li>";
+					}
+				}
+			?>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 			<li>

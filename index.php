@@ -36,6 +36,15 @@
         <title>HomeHub</title>
     </head>
     <body>
+
+		<!-- Non logged in redirect -->
+		<?php
+			if ( !(isset($_SESSION['user_id'])) )
+			{
+				header("Location: login.php");
+			}
+		?>
+
 		<div class="row">
 			<div class="col-md-12">
 				<h1 id="title-top">HomeHub</h1>
@@ -57,6 +66,15 @@
 				<li>
 					<a href="profile.php">Profile</a>
 				</li>
+				<?php
+					if (isset($_SESSION['user_id']))
+					{
+						if ($_SESSION['user_id'] == 777)
+						{
+							echo "<li><a href='controlpanel.php'>Control Panel</a></li>";
+						}
+					}
+				?>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li>
