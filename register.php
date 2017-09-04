@@ -10,10 +10,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- Bootstrap / CSS / Fonts -->
-		<link href="css/main-style.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/login-register.css">
+		<link rel="stylesheet" href="css/bttn.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/index.js"></script>
 
 		<!-- SEO
 		<meta name="description" content="">
@@ -35,62 +37,46 @@
 		<!-- Title -->
 		<title>HomeHub - Register</title>
 	</head>
-	<body>
-		<div class="row">
-			<div class="col-md-12">
-				<h1 id="title-top">Register</h1>
-			</div>
-		</div>
-		
-		<nav class="navbar navbar-inverse">
-			<ul class="nav navbar-nav">
-				<li class="active">
-					<a href="index.php">Home</a>
-				</li>
-			</ul>
-		</nav>
-
-		<div class="panel panel-info">
-			<div class="panel-heading">Register Form</div>
-			<div class="panel-body">
-				<form action="register_db.php" method="POST" class="form-horizontal">
-					<div class="form-group">
-						<label class="control-label col-md-2" for="username">Username:</label>
-						<div class="col-md-10">
-							<input type="text" class="form-control" id="usr" name="usr" placeholder="Username">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="control-label col-md-2" for="pwd">Password:</label>
-						<div class="col-md-10"> 
-							<input type="password" class="form-control" id="pwd" name="pwd" placeholder="Password">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="control-label col-md-2" for="name">Name</label>
-						<div class="col-md-10">
-							<input type="text" class="form-control" name="name" id="name" placeholder="Name">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="control-label col-md-2" for="surname">Surname</label>
-						<div class="col-md-10">
-							<input type="text" class="form-control" name="surname" id="surname" placeholder="Surname">
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="control-label col-md-2" for="email">E-Mail</label>
-						<div class="col-md-10">
-							<input type="text" class="form-control" name="email" id="email" placeholder="E-Mail">
-						</div>
-					</div>
-					<div class="form-group"> 
-						<div class="col-md-offset-2 col-md-10">
+    <body>
+        <div class="wrapper">
+	        <div class="container">
+                <h1>HomeHub User Register</h1>
+                <div class="row">
+				    <img src="images/logos/main-logo.png" alt="Logo" >	
+		        </div> <!-- row -->
+                <div class="row" style="margin-top: 5px">
+			        <!-- <h3>No user found</h3> -->
+		        </div> <!-- row -->
+                <div class="row">
+				    <form action="register_db.php" method="POST" class="form-horizontal">
+						<div class="form-group">
+                            <input type="text" class="form-control" id="usr" name="usr" placeholder="Username">
+						</div>  <!-- form-group -->
+						<div class="form-group">
+                            <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Password">
+						</div>  <!-- form-group -->
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+						</div>  <!-- form-group -->
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="surname" id="surname" placeholder="Surname">
+						</div>  <!-- form-group -->
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="email" id="email" placeholder="E-Mail">
+						</div>  <!-- form-group -->
+						<div class="form-group">
 							<button type="submit" class="btn btn-default">Submit</button>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</body>
+						</div>  <!-- form-group -->
+						<div class="form-group" style="margin-top: 3px">
+							<button type="reset" class="btn btn-default">Reset</button>
+						</div>  <!-- form-group -->
+					</form>
+		        </div> <!-- row  -->
+                <div class="row" style="margin-top: 0px", "margin-bottom: 10px">
+                    <button class="bttn-unite bttn-md bttn-success" style="margin-top: 10px" onclick="window.location.href='index.php'">Home</button>
+				    <p style="margin-top: 10px"> Copyright © HomeHub Project 2017 </p>
+		        </div> <!-- row  -->
+            </div> <!-- container -->
+		</div> <!-- wrapper -->
+    </body>
 </html>
