@@ -92,9 +92,6 @@
 					</a>
 				</li>
 				<li>
-					<a href="register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
-				</li>
-				<li>
 					<a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a>
 				</li>
 				<li>
@@ -104,19 +101,43 @@
 		</nav>
 
 		<!-- Panels -->
-		<div class="row">
-			<div class="col-md-6">
-				<!-- Left panel -->
-				<div class="panel panel-info">
-					<div class="panel-heading">Panel 1</div>
-					<div class="panel-body">Panel 1 Body</div>
+		<div class="wrapper">
+			<div class="container">
+				<h1>HomeHub User Register</h1>
+				<div class="row">
+					<img src="images/logos/main-logo.png" alt="Logo" >	
 				</div>
-			</div>
-			<div class="col-md-6">
-				<!-- Right panel -->
-				<div class="panel panel-info">
-					<div class="panel-heading">Panel 2</div>
-					<div class="panel-body">Panel 2 Body</div>
+				<div class="row" style="margin-top: 5px">
+					<!-- <h3>No user found</h3> -->
+				</div>
+				<div class="row">
+					<form action="register_db.php" method="POST" class="form-horizontal">
+						<div class="form-group">
+							<input type="text" class="form-control" id="usr" name="usr" placeholder="Username">
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" id="pwd" name="pwd" placeholder="Password">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" name="name" id="name" placeholder="Name">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" name="surname" id="surname" placeholder="Surname">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" name="email" id="email" placeholder="E-Mail">
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-default">Submit</button>
+						</div>
+						<div class="form-group" style="margin-top: 3px">
+							<button type="reset" class="btn btn-default">Reset</button>
+						</div>
+					</form>
+				</div>
+				<div class="row" style="margin-top: 0px", "margin-bottom: 10px">
+					<button class="bttn-unite bttn-md bttn-success" style="margin-top: 10px" onclick="window.location.href='index.php'">Home</button>
+					<p style="margin-top: 10px"> Copyright © HomeHub Project 2017 </p>
 				</div>
 			</div>
 		</div>
