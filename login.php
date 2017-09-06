@@ -43,10 +43,10 @@
 				<h1>HomeHub User Login</h1>
 				<div class="row">
 					<img src="images/logos/main-logo.png" alt="Logo" >
-				</div> <!-- row -->
+				</div>
 				<div class="row" style="margin-top: 5px">
 					<!-- > <h3>No user found</h3> -->
-				</div> <!-- row -->
+				</div>
 				<div class="row">
 					<form action="login_db.php" method="POST" class="form-horizontal">
 						<div class="form-group">
@@ -62,12 +62,12 @@
 							<button type="reset" class="btn btn-default">Reset</button>
 						</div>
 					</form>
-				</div> <!-- row  -->
+				</div>
 				<div class="row" style="margin-top: 0px", "margin-bottom: 10px">
 					<button class="bttn-unite bttn-md bttn-success" style="margin-top: 10px" onclick="window.location.href='index.php'">Home</button>
 					<p style="margin-top: 10px"> Copyright © HomeHub Project 2017 </p>
-				</div> <!-- row  -->
-			</div> <!-- container -->
-		</div> <!-- wrapper -->
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

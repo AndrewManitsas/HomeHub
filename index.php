@@ -36,8 +36,7 @@
         <title>HomeHub</title>
     </head>
     <body>
-
-		<!-- Non logged in redirect -->
+		<!-- Not logged in redirect -->
 		<?php
 			if ( !(isset($_SESSION['user_id'])) )
 			{

@@ -43,40 +43,40 @@
                 <h1>HomeHub User Register</h1>
                 <div class="row">
 				    <img src="images/logos/main-logo.png" alt="Logo" >	
-		        </div> <!-- row -->
+		        </div>
                 <div class="row" style="margin-top: 5px">
 			        <!-- <h3>No user found</h3> -->
-		        </div> <!-- row -->
+		        </div>
                 <div class="row">
 				    <form action="register_db.php" method="POST" class="form-horizontal">
 						<div class="form-group">
                             <input type="text" class="form-control" id="usr" name="usr" placeholder="Username">
-						</div>  <!-- form-group -->
+						</div>
 						<div class="form-group">
                             <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Password">
-						</div>  <!-- form-group -->
+						</div>
                         <div class="form-group">
                             <input type="text" class="form-control" name="name" id="name" placeholder="Name">
-						</div>  <!-- form-group -->
+						</div>
                         <div class="form-group">
                             <input type="text" class="form-control" name="surname" id="surname" placeholder="Surname">
-						</div>  <!-- form-group -->
+						</div>
                         <div class="form-group">
                             <input type="text" class="form-control" name="email" id="email" placeholder="E-Mail">
-						</div>  <!-- form-group -->
+						</div>
 						<div class="form-group">
 							<button type="submit" class="btn btn-default">Submit</button>
-						</div>  <!-- form-group -->
+						</div>
 						<div class="form-group" style="margin-top: 3px">
 							<button type="reset" class="btn btn-default">Reset</button>
-						</div>  <!-- form-group -->
+						</div>
 					</form>
-		        </div> <!-- row  -->
+		        </div>
                 <div class="row" style="margin-top: 0px", "margin-bottom: 10px">
                     <button class="bttn-unite bttn-md bttn-success" style="margin-top: 10px" onclick="window.location.href='index.php'">Home</button>
 				    <p style="margin-top: 10px"> Copyright © HomeHub Project 2017 </p>
-		        </div> <!-- row  -->
-            </div> <!-- container -->
-		</div> <!-- wrapper -->
+		        </div>
+            </div>
+		</div>
     </body>
 </html>
