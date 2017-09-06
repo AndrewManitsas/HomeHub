@@ -33,7 +33,7 @@
         <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
 
         <!-- Title -->
-        <title>HomeHub - Main</title>
+        <title>HomeHub</title>
     </head>
     <body>
 		<!-- Not logged in redirect -->
