@@ -104,15 +104,31 @@
 			<div class="col-md-6">
 				<!-- Left panel -->
 				<div class="panel panel-info">
-					<div class="panel-heading">Panel 1</div>
-					<div class="panel-body">Panel 1 Body</div>
+					<div class="panel-heading">Sensor 1</div>
+					<div class="panel-body">
+						<?php
+							//Read the data from the file 1 (sensor 1)
+							$file = fopen("sensors/a.txt", "r");
+							$data = fread($file, filesize("sensors/a.txt"));
+							fclose($file);
+							echo $data;
+						?>
+					</div>
 				</div>
 			</div>
 			<div class="col-md-6">
 				<!-- Right panel -->
 				<div class="panel panel-info">
-					<div class="panel-heading">Panel 2</div>
-					<div class="panel-body">Panel 2 Body</div>
+					<div class="panel-heading">Sensor 2</div>
+					<div class="panel-body">
+						<?php
+							//Read the data from the file 2 (sensor 2)
+							$file = fopen("sensors/b.txt", "r");
+							$data = fread($file, filesize("sensors/b.txt"));
+							fclose($file);
+							echo $data;
+						?>
+					</div>
 				</div>
 			</div>
 		</div>
