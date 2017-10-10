@@ -1,6 +1,6 @@
 import serial
 
-serial_port = "COM6"
+serial_port = "COM3 "
 baud_rate = 9600
 file_path_1 = "sensors/a.txt"
 file_path_2 = "sensors/b.txt"
@@ -12,6 +12,10 @@ while True:
     line = line.decode("utf-8")
     #print(line)
     s1, s2 = line.split(",")
+    s2 = s2.replace('\n','')
+    #newline bug fix
+    #if "\n" in s2:
+    #	print("String contains newline")
     print("Sensor 1: " + s1)
     print("Sensor 2: " + s2)
     f1 = open(file_path_1, "w")
