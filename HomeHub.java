@@ -10,51 +10,21 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.ERROR_MESSAGE;
 
-/**
- *
- * @author Jay
- */
 public class HomeHub 
 {
+    //@param args the command line arguments
 
-    /**
-     * Implements the main class of the project
-     * 
-     * @param args the command line arguments
-     */
     public static void main(String[] args) 
     {
         UniversalHandler reader = new UniversalHandler();
         
-        //temperature test
-       /* try 
-        {
-            reader.readTemp("temperature.txt");
-        } catch (IOException ex) 
-        {
-            JOptionPane.showMessageDialog(null, ex, "Error!", ERROR_MESSAGE);
-        }*/
-        
-        
-        //humidity test
         try 
         {
-            reader.readHumidity("humidity.txt");
-        } catch (IOException ex) 
+            reader.readHumidity("sensors/humidity.txt");
+        } 
+        catch (IOException ex) 
         {
             JOptionPane.showMessageDialog(null, ex, "Error!", ERROR_MESSAGE);
         }
-        
-        
-        /*
-        //radiator test
-        try 
-        {
-            reader.readRadiator("radiator.txt");
-        } catch (IOException ex) 
-        {
-            JOptionPane.showMessageDialog(null, ex, "Error!", ERROR_MESSAGE);
-        } */
     }
-    
 }

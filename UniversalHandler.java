@@ -1,6 +1,5 @@
 package homehub;
 
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -8,12 +7,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import javax.swing.JOptionPane;
 
-
-/**
- *Contains methods for reading and manipulating data
- * 
- * @author Jay
- */
 public class UniversalHandler 
 {
     private BufferedReader in;
@@ -21,14 +14,11 @@ public class UniversalHandler
     private PrintWriter writer;
     
     public UniversalHandler() {} ; //Empty constructor
-    
-   /**
-    *Implements the temperature data reading and handling
-    * 
-    *@param filename The name of the txt to be read
-    *@throws java.io.FileNotFoundException
-    *@throws java.io.IOException 
-    */
+
+    //@param filename The name of the txt to be read
+    //@throws java.io.FileNotFoundException
+    //@throws java.io.IOException 
+
     public void readTemp(String filename) throws FileNotFoundException, IOException
     {
         in = new BufferedReader( new FileReader(filename) ); //Initialize buffer
@@ -43,28 +33,28 @@ public class UniversalHandler
         int temperature = Integer.parseInt(line); //converts line (string) to Int
         
         //checking if temp is between bounds (comfort human bounds are 15-25 celcius)
-        if(temperature<15)
+        if (temperature < 15)
         {
-            message="cold";
+            message = "cold";
         }
-        else if(temperature>25)
+        else if (temperature > 25)
         {
-            message="hot";
+            message = "hot";
         }
         else
         {
-            message="ok";
+            message = "ok";
         }
         
         //writing temperature variables to new file
         //O stands for Output
-        writer = new PrintWriter("temperatureO.txt", "UTF-8");
+        writer = new PrintWriter("sensors/temperature.txt", "UTF-8");
         writer.println(temperature);
         //writer.println(message);
         writer.close();
         
         //writing key message to different file
-        writer = new PrintWriter("tempMessage.txt" , "UTF-8");
+        writer = new PrintWriter("sensors/tempMessage.txt" , "UTF-8");
         writer.println(message);
         writer.close();
     }
@@ -86,25 +76,25 @@ public class UniversalHandler
         //checking if humidity is between bounds (comfort human bounds are 30% - 80%)
         if(humidity<30)
         {
-            message="dry";
+            message = "dry";
         }
         else if(humidity>80)
         {
-            message="wet";
+            message = "wet";
         }
         else
         {
-            message="ok";
+            message = "ok";
         }
         
         //writing humidity variables to new file
-        writer = new PrintWriter("humidityO.txt", "UTF-8");
+        writer = new PrintWriter("sensors/humidity.txt", "UTF-8");
         writer.println(humidity);
         //writer.println(message);
         writer.close();
         
         //writing key message to different file
-        writer = new PrintWriter("humidityMessage.txt" , "UTF-8");
+        writer = new PrintWriter("sensors/humidityMessage.txt" , "UTF-8");
         writer.println(message);
         writer.close();
     }
@@ -125,25 +115,24 @@ public class UniversalHandler
         int radiator = Integer.parseInt(line); //converts line (string) to Int
         
         //checking if radiator emission is between bounds (ideal emission to 16m^2 is 1635W)
-        if(radiator>3200)
+        if (radiator > 3200)
         {
-            message="efficiencybelow50";
+            message = "efficiencybelow50";
         }
         else
         {
-            message="badefficiency";
+            message = "badefficiency";
         }
         
         //writing radiator variable to new file
-        writer = new PrintWriter("radiatorO.txt", "UTF-8");
+        writer = new PrintWriter("sensors/heater_temperature.txt", "UTF-8");
         writer.println(radiator);
         //writer.println(message);
         writer.close();
         
         //writing key message to different file
-        writer = new PrintWriter("radiatorMessage.txt" , "UTF-8");
+        writer = new PrintWriter("sensors/heater_temperatureMessage.txt" , "UTF-8");
         writer.println(message);
         writer.close();
     }
-    
 }
