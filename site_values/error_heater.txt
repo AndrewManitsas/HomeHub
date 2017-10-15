@@ -1,1 +1,1 @@
-Heating Efficiency > 50%. No action needed.
+Efficiency < 50%. Service heating system.
